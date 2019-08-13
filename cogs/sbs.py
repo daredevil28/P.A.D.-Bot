@@ -31,7 +31,7 @@ class SbsCog(commands.Cog):
 		roleid = 439700931932585987
 		serverid = 160246330701250560
 
-		if ctx.message.server.id == serverid:
+		if ctx.message.guild.id == serverid:
 			member = ctx.message.author
 			role = ctx.guild.get_role(roleid)
 
