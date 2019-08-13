@@ -12,7 +12,8 @@ class EtcCog(commands.Cog):
 	async def info(self, ctx):
 		if ctx.invoked_subcommand is None:
 			pass
-	@age.error
+
+	@info.error
 	async def info_error():
 		await ctx.send("Useage: p!info [user/age/joined] (username)")
 	
