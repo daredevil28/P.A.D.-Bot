@@ -16,7 +16,7 @@ bot = commands.Bot(command_prefix='p!')
 
 initial_extensions = ['cogs.ping', 'cogs.owner', 'cogs.moderation', 'cogs.music', 'cogs.sbs', 'cogs.etc']
 
-#Load all cogs in the initial_extensions array	
+#Load all cogs in the initial_extensions array
 if __name__ == '__main__':
 	for extension in initial_extensions:
 		try:
