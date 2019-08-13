@@ -9,8 +9,8 @@ class SbsCog(commands.Cog):
 	@commands.command(pass_context=True, hidden=True)
 	async def access(self, ctx):
 		#variables
-		roleid = 323214034272911360
-		channelid = 538659673469878273
+		roleid = 439138951916290059
+		channelid = 439139494684262400
 		#Did the user send the command in the right channel?
 		if ctx.message.channel.id == channelid:
 
