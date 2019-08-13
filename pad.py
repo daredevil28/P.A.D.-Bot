@@ -6,7 +6,7 @@ import json
 from discord.ext import commands
 
 #set logging level
-logging.basicConfig(level=logging.INFO)
+#logging.basicConfig(level=logging.INFO)
 
 data = json.load(open("token.json"))
 token = data["token"]

@@ -44,7 +44,7 @@ if not discord.opus.is_loaded():
 # Fuck your useless bug reports message that gets two link embeds and confuses users
 youtube_dl.utils.bug_reports_message = lambda: ''
 
-class MusicCog:
+class MusicCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -510,4 +510,4 @@ class Music:
 bot = commands.Bot(command_prefix='music.', description='A shitty, fucked up music bot. You can skid it.')
 
 def setup(bot):
-    bot.add_cog(Music(bot))
+    bot.add_cog(MusicCog(bot))

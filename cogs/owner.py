@@ -2,12 +2,12 @@ import discord
 import io
 from discord.ext import commands
 
-class OwnerCog:
+class OwnerCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
 
-    @commands.group()
+    @commands.group(hidden=True)
     @commands.is_owner()
     async def change(self, ctx):
         if ctx.invoked_subcommand is None:
@@ -24,13 +24,13 @@ class OwnerCog:
     	buffer = avtmp.read()
     	await ctx.bot.user.edit(avatar=buffer)
 
-    @commands.command()
+    @commands.command(hidden=True)
     @commands.is_owner()
     async def say(self, ctx, *, arg):
         await ctx.message.delete()
         await ctx.send(arg)
 
-    @commands.command()
+    @commands.command(hidden=True)
     @commands.is_owner()
     async def shutdown(self, ctx):
         await ctx.send("shutting down...")

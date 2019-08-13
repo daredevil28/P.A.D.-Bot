@@ -4,12 +4,12 @@ import mysql.connector
 
 gulag_file = discord.File('gulag.png')
 
-class ModerationCog:
+class ModerationCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
 
-    @commands.command()
+    @commands.command(aliases=["mute"])
     @commands.has_permissions(manage_messages=True)
     async def gulag(self, ctx):
     	await ctx.send(file=gulag_file)
