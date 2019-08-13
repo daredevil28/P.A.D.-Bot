@@ -42,7 +42,7 @@ class SbsCog(commands.Cog):
 				await ctx.message.delete()
 				
 			else:
-				await bot.remove_roles(role, reason="Requested removing of role")
+				await member.remove_roles(role, reason="Requested removing of role")
 				await member.send("You no longer have the Scientist role", delete_after=5)
 				await asyncio.sleep(5)
 				await ctx.message.delete()
