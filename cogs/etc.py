@@ -12,17 +12,16 @@ class EtcCog(commands.Cog):
 	async def info(self, ctx):
 		if ctx.invoked_subcommand is None:
 			pass
-
-@age.error
-async def age_error():
-	await ctx.send("Useage: p!info [user/age/joined] (username)")
-
+	@age.error
+	async def info_error():
+		await ctx.send("Useage: p!info [user/age/joined] (username)")
+	
 	@info.command()
 	async def age(self, ctx, member : discord.User = None):
 		if member is None:
 			member = ctx.message.author
 		await ctx.send("{0.name}'s account is created at {0.created_at}".format(member))
-
+	
 	@info.command()
 	async def joined(self, ctx, member : discord.User = None):
 		if member is None:
