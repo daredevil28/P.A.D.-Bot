@@ -37,13 +37,13 @@ class SbsCog(commands.Cog):
 
 			if role not in member.roles:
 				await member.add_roles(role, reason="Requested role")
-				await member.send("You have recieved the Scientist role" delete_after=5)
+				await member.send("You have recieved the Scientist role", delete_after=5)
 				await asyncio.sleep(5)
 				await ctx.message.delete()
 				
 			else:
 				await bot.remove_roles(role, reason="Requested removing of role")
-				await member.send("You no longer have the Scientist role" delete_after=5)
+				await member.send("You no longer have the Scientist role", delete_after=5)
 				await asyncio.sleep(5)
 				await ctx.message.delete()
 
