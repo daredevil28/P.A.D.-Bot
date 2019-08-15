@@ -24,7 +24,7 @@ class SbsCog(commands.Cog):
 			if role not in member.roles:
 
 				await member.add_roles(role, reason="Join role added")
-				await member.send("You have recieved access! The IP for the server is starquest.spacebeaverstudios.com. Click this link to see more info about StarQuest and how to get the resource pack! <https://discordapp.com/channels/160246330701250560/351432162232500225?jump=394914296796151808>")
+				await member.send("You have recieved access! The IP for the server is starquest.spacebeaverstudios.com. Click this link to see more info about StarQuest and how to get the resource pack! <https://discordapp.com/channels/160246330701250560/351432162232500225/591093020712108032>")
 
 	@commands.command(pass_context=True, hidden=True)
 	async def science(self, ctx):
