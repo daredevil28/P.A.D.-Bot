@@ -2,8 +2,6 @@ import discord
 from discord.ext import commands
 import mysql.connector
 
-gulag_file = discord.File('gulag.png')
-
 class ModerationCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -12,6 +10,7 @@ class ModerationCog(commands.Cog):
     @commands.command(aliases=["mute"])
     @commands.has_permissions(manage_messages=True)
     async def gulag(self, ctx):
+    	gulag_file = discord.File('gulag.png')
     	await ctx.send(file=gulag_file)
 
     
