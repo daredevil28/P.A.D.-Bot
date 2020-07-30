@@ -54,7 +54,6 @@ async def on_message(message):
 @bot.event
 async def on_member_update(before, after):
 	if after.guild == sbsServerId:
-		print(after.name)
 		if role not in before.roles:
 			if role in after.roles:
 				await sbsChannel.send("{0.mention} has become a StarquestMinecraft patreon! Thank you very much!\n <https://www.patreon.com/StarQuestMinecraft>".format(after))
